@@ -102,7 +102,7 @@
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Gradle](https://img.shields.io/badge/Gradle-02303A?style=flat-square&logo=gradle&logoColor=white)
 
-Kafka 토픽으로 유입되는 결제/활동 데이터를 실시간으로 분석하여, **일정 시간 동안 활동이 없는 상점(Store)을 자동으로 감지하는 모니터링 애플리케이션**입니다.
+해당 레포는 Kafka 토픽으로 유입되는 결제/활동 데이터를 실시간으로 분석하여, **일정 시간 동안 활동이 없는 상점(Store)을 자동으로 감지하는 모니터링 애플리케이션**입니다.
 
 ---
 

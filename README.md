@@ -155,6 +155,29 @@ Excel 데이터 ---> test-topic ---(가공)--> 3_non_response
                    상태 관리 및 비활성 감지
 ```
 
+# 🏪 Store Inactivity Detector
+
+![Java](https://img.shields.io/badge/Java-17-007396?style=flat-square&logo=java&logoColor=white)
+![Kafka](https://img.shields.io/badge/Apache%20Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Gradle](https://img.shields.io/badge/Gradle-02303A?style=flat-square&logo=gradle&logoColor=white)
+
+Kafka 토픽으로 유입되는 결제/활동 데이터를 실시간으로 분석하여, **일정 시간 동안 활동이 없는 상점(Store)을 자동으로 감지하는 모니터링 애플리케이션**입니다.
+
+---
+
+## 🏗 Architecture
+
+시스템의 데이터 흐름과 역할은 다음과 같습니다.
+
+```mermaid
+graph LR
+    A[purchase-main] -->|Data Ingest| B(test-topic)
+    B -->|Consume & Analyze| C[Store Inactivity Detector]
+    C -->|Alert Inactivity| D(3_non_response)
+    
+    style C fill:#f9f,stroke:#333,stroke-width:2px
+
 ## 관련 프로젝트
 
 - `purchase-main`: Excel 데이터를 `test-topic`으로 보내는 애플리케이션
